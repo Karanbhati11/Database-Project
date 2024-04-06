@@ -1,5 +1,5 @@
 # Database-Project
-Database project for the sem 2 Section 3.
+Database project for the sem 2 Section 8.
 
 Group Name: W3Coders
 
