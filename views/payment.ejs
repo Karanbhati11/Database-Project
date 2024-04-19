@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./js/validation.js"></script>
+  </head>
+  <body>
+    <%- include("./layouts/navbar") %>
+    <div class="container">
+      <h1>Checkout Form</h1>
+      <br />
+      <h3>Product Details</h3>
+      <form>
+        <div class="form-group">
+          <label for="name" class="form-label">Product Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            value="<%- name%>"
+            disabled
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="form-group">
+          <label for="price" class="form-label">Product Price</label>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            name="price"
+            value="<%- price%>"
+            disabled
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="form-group">
+          <label for="colour" class="form-label">Colour</label>
+          <input
+            type="text"
+            class="form-control"
+            id="colour"
+            value="<%- color%>"
+            name="colour"
+            disabled
+            aria-describedby="emailHelp"
+          />
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <script
+            src="https://js.stripe.com/v2/"
+            type="text/javascript"
+          ></script>
+          <form
+            accept-charset="UTF-8"
+            action="/payment"
+            class="require-validation"
+            data-cc-on-file="false"
+            data-stripe-publishable-key="pk_bQQaTxnaZlzv4FnnuZ28LFHccVSaj"
+            id="payment-form"
+            method="post"
+          >
+            <div style="margin: 0; padding: 0; display: inline">
+              <input name="utf8" type="hidden" value="✓" /><input
+                name="_method"
+                type="hidden"
+                value="PUT"
+              /><input
+                name="authenticity_token"
+                type="hidden"
+                value="qLZ9cScer7ZxqulsUWazw4x3cSEzv899SP/7ThPCOV8="
+              />
+            </div>
+            <div class="form-row">
+              <div class="col-xs-12 form-group required">
+                <label class="control-label">Name on Card</label>
+                <input
+                  class="form-control"
+                  id="card-name"
+                  name="card_name"
+                  size="4"
+                  type="text"
+                />
+              </div>
+              <input
+                type="hidden"
+                class="form-control"
+                id="price"
+                name="phonePrice"
+                value="<%- price%>"
+              />
+            </div>
+            <input
+              type="hidden"
+              class="form-control"
+              id="name"
+              name="username"
+              value="<%- name%>"
+              aria-describedby="emailHelp"
+            />
+            <div class="form-row">
+              <div class="col-xs-12 form-group card required">
+                <label class="control-label">Card Number</label>
+                <input
+                  autocomplete="off"
+                  class="form-control card-number"
+                  id="card-number"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="16"
+                  name="card_number"
+                  type="number"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-xs-4 form-group cvc required">
+                <label class="control-label">CVC</label>
+                <input
+                  autocomplete="off"
+                  class="form-control card-cvc"
+                  placeholder="ex. 311"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="3"
+                  id="cvc"
+                  name="cvv"
+                  type="number"
+                />
+              </div>
+              <div class="col-xs-4 form-group expiration required">
+                <label class="control-label">Expiration</label>
+                <input
+                  class="form-control card-expiry-month"
+                  placeholder="MM"
+                  id="card-expiry-month"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="2"
+                  name="card_expiry_month"
+                  type="number"
+                />
+              </div>
+              <div class="col-xs-4 form-group expiration required">
+                <label class="control-label"> </label>
+                <input
+                  class="form-control card-expiry-year"
+                  placeholder="YYYY"
+                  id="card-expiry-year"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="4"
+                  name="card_expiry_year"
+                  type="number"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12">
+                <div class="form-control total btn btn-info">
+                  Total:
+                  <span class="amount">$300</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 form-group">
+                <button
+                  class="form-control btn btn-primary submit-button"
+                  type="submit"
+                >
+                  Pay »
+                </button>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 error">
+                <div
+                  class="alert alert-danger"
+                  hidden
+                  role="alert"
+                  id="alert"
+                ></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  #links {
+    display: flex;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    /* height: 50px; */
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  #links a {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 20px;
+  }
+  
+  h2 {
+    color: rgb(52, 50, 50);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-image: url("../imgs/banner-bgimg.jpg");
+    line-height: 200px;
+    margin-top: 0;
+  }
+  
+  .smartphones {
+    display: flex;
+    margin: 20px 50px;
+    /* flex-wrap: wrap; */
+  }
+  
+  .phone {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    height: 550px;
+    margin: 10px;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0px 16px 52px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .phone .phoneimg {
+    width: 220px;
+    height: 300px;
+    padding: 20px;
+  }
+  
+  #getintouch {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .moreinfo {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    height: 325px;
+    margin: 10px;
+    background-color: white;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 16px 52px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .moreinfo img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  #career {
+    padding-top: 20px;
+  }
+  
+  #copyright {
+    text-align: center;
+    font-style: italic;
+    margin: 30px;
+  }
+  
+  #logo {
+    font-family: "Calibri";
+    float: left;
+    height: 25px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .moreinfo p {
+    margin: 10px;
+  }
+  
+  #careers {
+    padding: 10px 15px;
+  }
+  
+  .buynow {
+    background-color: rgb(215, 202, 202);
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 20px;
+    border-style: hidden;
+    color: black; 
+  }
+  
+  .buynow:hover {
+    box-shadow: 10px 10px 30px 5px grey;
+  }
+  
+  #cart {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 10px 20px;
+  }
+  
+  .phone .wishlist {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    align-self: flex-end;
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  .email {
+    line-height: 50%;
+    text-align: left;
+  }
+  .price {
+    font-size: larger;
+    color: red;
+    font-weight: bolder;
+  }
+  
+  .text {
+    font-size: large;
+  }
+  
+  .goup {
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    /* margin-right: 740px; */
+    margin-bottom: 60px;
+    border-radius: 5px;
+    background-color: rgb(215, 202, 202);
+  }
+  
+  #description {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-indent: 60px;
+    /* margin: 455px; */
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  #signup{
+    display: flex;
+    justify-content: center;
+  }
+  #headingsignup{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+  }
+  label{
+    text-transform: capitalize !important;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+  }
+  input{
+    border-radius: 4px;
+    width: 250px;
+    height: 28px;
+    border-color: grey;
+  }
+  #button{
+    width: 95%;
+    padding: 7px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(237, 237, 0);
+    cursor: pointer;
+  }
+  #button:hover{
+    opacity: 0.8;
+  }
+  #signupform{
+    /* border: 1px solid grey; */
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 600px;
+    margin-left: 600px;
+    box-shadow: 0px 0px 5px 0px grey;
+  }
+  span{
+    color: red;
+  }
+  #login{
+    display: flex;
+    justify-content: center;
+  }
+  #btn{
+    width: 95%;
+    padding: 7px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(237, 237, 0);
+    cursor: pointer;
+  }
+  #btn:hover{
+    opacity: 0.8;
+  }
+  #loginform{
+    /* border: 1px solid grey; */
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 600px;
+    margin-left: 600px;
+    box-shadow: 0px 0px 5px 0px grey;
+  }
+  #headinglogin{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+  }
+
+  /* Payments Page */
+  
+  .container .submit-button {
+    margin-top: 10px;
+  }
+  .container h1{
+      text-align: center;
+  }
+  .container span{
+    color: aliceblue;
+  }
+  
+  @media screen and (max-width: 760px) {
+    #links {
+      flex-direction: column;
+    }
+  
+    .smartphones {
+      flex-wrap: wrap;
+    }
+  
+    #getintouch {
+      flex-wrap: wrap;
+    }
+  
+    #description {
+      text-align: center;
+      text-indent: 0;
+    }
+  
+    nav {
+      flex-direction: column;
+    }
+  
+    h1 {
+      font-size: 1rem;
+    }
+  
+    h2 {
+      font-size: 0.8rem;
+    }
+  
+    p {
+      font-size: 0.6rem;
+    }
+  
+    .text {
+      font-size: 0.8rem;
+    }
+  
+    b {
+      font-size: 0.8rem;
+    }
+  
+    #logo {
+      margin-left: 20px;
+      width: 300px;
+    }
+  }
+  

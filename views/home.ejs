@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/validation.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>SPARSH SMARTSHOP</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <%- include("./layouts/navbar") %>
+    <header>
+      <h1>Welcome to W3 Coders Smartshop</h1>
+    </header>
+    <main>
+      <h2>Popular Smartphones</h2>
+        Below are our one of the highest selling electronics products.
+      </p>
+      <div class="smartphones">
+        <form class="phone" method="get" action="/payment">
+          <input type="hidden" name="name" value="Apple Iphone 14 Pro" />
+          <input type="hidden" name="price" value="$1,499.00" />
+          <input type="hidden" name="color" value="DEEP PURPLE" />
+          <img
+            src="./imgs/image 4.jpg"
+            alt="Apple Iphone 14 Pro"
+            class="phoneimg"
+          />
+
+          <h2>Apple Iphone 14 Pro</h2>
+          <p class="text">Price: <span class="price">$1,499.00</span></p>
+          <p class="text">Colour: DEEP PURPLE</p>
+          <p class="text">FREE Delivery Available</p>
+          <p class="text">Warranty: 90 Days</p>
+          <button type="button" class="buynow">BUY NOW</button>
+        </form>
+        <form class="phone" method="get" action="/payment">
+          <input type="hidden" name="name" value="Apple Iphone 15 Pro" />
+          <input type="hidden" name="price" value="$2,199.00" />
+          <input type="hidden" name="color" value="TITANIUM" />
+          <img
+            src="./imgs/Iphone15 Pro.jpg"
+            alt="Apple Iphone 15 Pro"
+            class="phoneimg"
+          />
+          <h2>Apple Iphone 15 Pro</h2>
+          <p class="text">Price: <span class="price">$2,199.00</span></p>
+          <p class="text">Colour: TITANIUM</p>
+          <p class="text">FREE Delivery Available</p>
+          <p class="text">Warranty: 90 Days</p>
+          <button type="button" class="buynow">BUY NOW</button>
+        </form>
+        <form class="phone" method="get" action="/payment">
+          <input type="hidden" name="name" value="Samsung Galaxy S23 Ultra" />
+          <input type="hidden" name="price" value="$1,099.00" />
+          <input type="hidden" name="color" value="DEEP PURPLE" />
+          <img
+            src="./imgs/Samsung Galaxy S23 Ultra.jpg"
+            alt="Samsung Galaxy S23 Ultra 5G"
+            class="phoneimg"
+          />
+          <h2>Samsung Galaxy S23 Ultra</h2>
+          <p class="text">Price: <span class="price">$1,099.00</span></p>
+          <p class="text">Colour: PHANTOM BLACK</p>
+          <p class="text">FREE Delivery Available</p>
+          <p class="text">Warranty: 100 Days</p>
+          <button type="button" class="buynow">BUY NOW</button>
+        </form>
+      </div>
+      <div class="smartphones">
+        <!-- Apple Iphone 14 Pro -->
+        <form class="phone" method="get" action="/payment">
+          <input type="hidden" name="name" value="Apple Iphone 14 Pro" />
+          <input type="hidden" name="price" value="$1,499.00" />
+          <input type="hidden" name="color" value="DEEP PURPLE" />
+          <img
+            src="./imgs/image 4.jpg"
+            alt="Apple Iphone 14 Pro"
+            class="phoneimg"
+          />
+          <h2>Apple Iphone 14 Pro</h2>
+          <p class="text">Price: <span class="price">$1,499.00</span></p>
+          <p class="text">Colour: DEEP PURPLE</p>
+          <p class="text">FREE Delivery Available</p>
+          <p class="text">Warranty: 90 Days</p>
+          <input type="submit" class="buynow" value="Buy Now" />
+        </form>
+
+        <!-- Apple Iphone 15 Pro -->
+        <form class="phone" method="get" action="/payment">
+          <input type="hidden" name="name" value="Apple Iphone 15 Pro" />
+          <input type="hidden" name="price" value="$2,199.00" />
+          <input type="hidden" name="color" value="TITANIUM" />
+          <img
+            src="./imgs/Iphone15 Pro.jpg"
+            alt="Apple Iphone 15 Pro"
+            class="phoneimg"
+          />
+          <h2>Apple Iphone 15 Pro</h2>
+          <p class="text">Price: <span class="price">$2,199.00</span></p>
+          <p class="text">Colour: TITANIUM</p>
+          <p class="text">FREE Delivery Available</p>
+          <p class="text">Warranty: 90 Days</p>
+          <button type="submit" class="buynow">BUY NOW</button>
+        </form>
+
+        <!-- Samsung Galaxy S23 Ultra -->
+        <form class="phone" method="get" action="/payment">
+          <input type="hidden" name="name" value="Samsung Galaxy S23 Ultra" />
+          <input type="hidden" name="price" value="$1,099.00" />
+          <input type="hidden" name="color" value="PHANTOM BLACK" />
+          <img
+            src="./imgs/Samsung Galaxy S23 Ultra.jpg"
+            alt="Samsung Galaxy S23 Ultra 5G"
+            class="phoneimg"
+          />
+          <h2>Samsung Galaxy S23 Ultra</h2>
+          <p class="text">Price: <span class="price">$1,099.00</span></p>
+          <p class="text">Colour: PHANTOM BLACK</p>
+          <p class="text">FREE Delivery Available</p>
+          <p class="text">Warranty: 100 Days</p>
+          <input type="submit" class="buynow" value="BUY NOW" />
+        </form>
+      </div>
+    </main>
+    <h2>Get In Touch With Us</h2>
+    <div id="getintouch">
+      <div class="moreinfo">
+        <img src="./imgs/Contact.png" alt="Contact Icon" />
+        <p class="email">
+          <b>Email: </b
+          ><a href="mailto:sparshsmartshop456@gmail.com"
+            >w3coders@456@gmail.com</a
+          >
+        </p>
+
+        <p></p>
+        <p class="email">
+          <b>Mobile: </b><a href="tel:+1(926)-456-8978">+1(926)-456-8978</a>
+        </p>
+      </div>
+      <div class="moreinfo">
+        <img src="./imgs/Career.png" id="career" alt="Career Icon" />
+        <b
+          ><i>
+            <p>Join our amazing team today!</p>
+          </i></b
+        >
+
+        <b id="careers"
+          >Email your resume to
+          <a href="mailto:sparshsmartshopcareers@gmail.com"
+            >w3coderscareers@gmail.com</a
+          >
+          or give us a call on
+          <a href="tel:+1(926)-456-8978">+1(947)-428-8798</a>. Our recruitment
+          team will be in touch with next steps after reviewing your eligibility
+          for the preferred opportunity.</b
+        >
+      </div>
+    </div>
+    <footer>
+      <div>
+        <p id="copyright">© Copyright 2023 W3coders</p>
+      </div>
+      <a href="#logo" class="goup"><button class="goup">Go Up</button></a>
+    </footer>
+  </body>
+</html>

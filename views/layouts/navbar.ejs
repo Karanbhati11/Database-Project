@@ -1,0 +1,12 @@
+<div id="links">
+    <a href="/" id="logo">w3 coders</a>
+    <nav>
+      <% if(loggedIn) { %>
+      <a href="/home">Home</a>
+      <a href="/logout">Logout</a>
+      <% } else { %>
+      <a href="/">SIGN UP</a>
+      <a href="/login">LOG IN</a>
+      <% } %>
+    </nav>
+  </div>
